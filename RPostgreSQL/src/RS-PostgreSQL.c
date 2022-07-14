@@ -1513,7 +1513,7 @@ check_groupEvents(s_object * data, Stype fld_Sclass[], Sint irow, Sint jcol)
         break;
 
     default:
-        Rf_error("un-recognized R/S data type %d", fld_Sclass[jcol]);
+        /* Rf_error("un-recognized R/S data type %d", fld_Sclass[jcol]); */
         break;
     }
 

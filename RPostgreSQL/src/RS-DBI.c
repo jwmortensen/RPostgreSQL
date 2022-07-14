@@ -593,20 +593,18 @@ RS_DBI_setException(Db_Handle * handle, DBI_EXCEPTION exceptionType, int errorNu
 void
 RS_DBI_errorMessage(char *msg, DBI_EXCEPTION exception_type)
 {
-    char *driver = "RS-DBI";    /* TODO: use the actual driver name */
-
     switch (exception_type) {
     case RS_DBI_MESSAGE:
-        Rf_warning("RPostgreSQL message: %s", msg);    /* was PRINT_IT */
+        /*Rf_warning("RPostgreSQL message: %s", msg);*/    /* was PRINT_IT */
         break;
     case RS_DBI_WARNING:
-        Rf_warning("RPostgreSQL warning: %s", msg);
+        /*Rf_warning("RPostgreSQL warning: %s", msg);*/
         break;
     case RS_DBI_ERROR:
-        Rf_error("RPostgreSQL error: %s", msg);
+        /*Rf_error("RPostgreSQL error: %s", msg);*/
         break;
     case RS_DBI_TERMINATE:
-        Rf_error("RPostgreSQL fatal: %s", msg);     /* was TERMINATE */
+        /*Rf_error("RPostgreSQL fatal: %s", msg);*/     /* was TERMINATE */
         break;
     }
     return;
